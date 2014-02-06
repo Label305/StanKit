@@ -19,7 +19,7 @@ Pod::Spec.new do |s|
   s.frameworks   = 'Crashlytics', 'CFNetwork', 'QuartzCore'
   s.xcconfig     = { 'FRAMEWORK_SEARCH_PATHS' => '"$(PODS_ROOT)/Frameworks"' }
 
-  spec.dependency 'TestFlightSDK', '~> 2.1'
+  s.dependency 'TestFlightSDK', '~> 2.1'
 
   s.requires_arc = true
 end
