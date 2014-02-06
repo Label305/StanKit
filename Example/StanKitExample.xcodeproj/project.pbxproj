@@ -19,8 +19,8 @@
 		7603E5E418A142F000C4684A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7603E5CC18A142F000C4684A /* UIKit.framework */; };
 		7603E5EC18A142F000C4684A /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7603E5EA18A142F000C4684A /* InfoPlist.strings */; };
 		7603E5EE18A142F000C4684A /* StanKitExampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7603E5ED18A142F000C4684A /* StanKitExampleTests.m */; };
-		7603E5FA18A1442F00C4684A /* SKLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 7603E5F918A1442F00C4684A /* SKLogger.m */; };
 		7603E5FC18A3947800C4684A /* Crashlytics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7603E5FB18A3947800C4684A /* Crashlytics.framework */; };
+		7603E60018A39F3200C4684A /* SKLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 7603E5FF18A39F3200C4684A /* SKLogger.m */; };
 		C7DB34B5E344447A86F5572B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B2F955D083B14C1CB1CDEDFD /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -51,9 +51,9 @@
 		7603E5E918A142F000C4684A /* StanKitExampleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "StanKitExampleTests-Info.plist"; sourceTree = "<group>"; };
 		7603E5EB18A142F000C4684A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7603E5ED18A142F000C4684A /* StanKitExampleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StanKitExampleTests.m; sourceTree = "<group>"; };
-		7603E5F818A1442F00C4684A /* SKLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKLogger.h; sourceTree = "<group>"; };
-		7603E5F918A1442F00C4684A /* SKLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKLogger.m; sourceTree = "<group>"; };
 		7603E5FB18A3947800C4684A /* Crashlytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Crashlytics.framework; sourceTree = "<group>"; };
+		7603E5FE18A39F3200C4684A /* SKLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKLogger.h; sourceTree = "<group>"; };
+		7603E5FF18A39F3200C4684A /* SKLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKLogger.m; sourceTree = "<group>"; };
 		B2F955D083B14C1CB1CDEDFD /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E860B070A24D4186B3678C30 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -87,7 +87,7 @@
 		7603E5BC18A142F000C4684A = {
 			isa = PBXGroup;
 			children = (
-				7603E5F718A1441F00C4684A /* Classes */,
+				7603E5FD18A39F3200C4684A /* Classes */,
 				7603E5CE18A142F000C4684A /* StanKitExample */,
 				7603E5E718A142F000C4684A /* StanKitExampleTests */,
 				7603E5C718A142F000C4684A /* Frameworks */,
@@ -158,11 +158,11 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		7603E5F718A1441F00C4684A /* Classes */ = {
+		7603E5FD18A39F3200C4684A /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				7603E5F818A1442F00C4684A /* SKLogger.h */,
-				7603E5F918A1442F00C4684A /* SKLogger.m */,
+				7603E5FE18A39F3200C4684A /* SKLogger.h */,
+				7603E5FF18A39F3200C4684A /* SKLogger.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -300,7 +300,7 @@
 			files = (
 				7603E5D918A142F000C4684A /* SKAppDelegate.m in Sources */,
 				7603E5D518A142F000C4684A /* main.m in Sources */,
-				7603E5FA18A1442F00C4684A /* SKLogger.m in Sources */,
+				7603E60018A39F3200C4684A /* SKLogger.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
