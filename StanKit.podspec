@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   s.source_files = 'Classes/*.{h,m}'
 
   s.dependency 'TestFlightSDK', '~> 2.1'
-  s.dependency 'CrashlyticsFramework', :git => "https://github.com/bpoplauschi/CrashlyticsFramework.git"
+  s.dependency 'CrashlyticsFramework'
 
   s.requires_arc = true
 end
