@@ -14,7 +14,7 @@ Pod::Spec.new do |s|
 
   s.platform     = :ios, '7.0'
 
-  s.source_files = 'Frameworks/Crashlytics.framework/Versions/A/Headers/Crashlytics.h', 'Classes/StanKit.h'
+  s.source_files = 'Frameworks/Crashlytics.framework/Versions/A/Headers/Crashlytics.h', 'Classes/*.{h,m}'
   s.preserve_paths = 'Frameworks/Crashlytics.framework/*'
   s.frameworks   = 'Crashlytics', 'CFNetwork', 'QuartzCore'
   s.xcconfig     = { 'FRAMEWORK_SEARCH_PATHS' => '"$(PODS_ROOT)/Frameworks"' }
