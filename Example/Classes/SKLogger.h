@@ -10,13 +10,13 @@
 #import <Crashlytics/Crashlytics.h>
 #import <TestFlightSDK/TestFlight.h>
 
-#define SKLog( s, ... ) [SKLogger logFor:__PRETTY_FUNCTION__ lineNumber:__LINE__ messageWithFormat:(s), ##__VA_ARGS__]
+#define SKLog( s, ... ) [SKLogger logFor:[NSString stringWithFormat:@"%s",__PRETTY_FUNCTION__] lineNumber:__LINE__ messageWithFormat:(s), ##__VA_ARGS__]
 
 @interface SKLogger : NSObject 
 
 + (void)setupWithTestFlightToken:(NSString *)testFlightToken crashlyticsAPIKey:(NSString *)crashlyticsAPIKey;
 
-+ (void)logFor:(char *)methodDescription lineNumber:(NSInteger)lineNumber messageWithFormat :(NSString *)formatString, ...;
++ (void)logFor:(NSString *)methodDescription lineNumber:(NSInteger)lineNumber messageWithFormat :(NSString *)formatString, ...;
 
 + (void)passCheckpoint:(NSString *)string;
 

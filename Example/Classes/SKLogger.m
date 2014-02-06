@@ -27,7 +27,7 @@
     [Crashlytics startWithAPIKey:crashlyticsAPIKey];
 }
 
-+ (void)logFor:(char *)methodDescription lineNumber:(NSInteger)lineNumber messageWithFormat :(NSString *)formatString, ...
++ (void)logFor:(NSString *)methodDescription lineNumber:(NSInteger)lineNumber messageWithFormat :(NSString *)formatString, ...
 {
     va_list args;
     va_start(args, formatString);
@@ -35,7 +35,7 @@
     va_end(args);
 
     // %p is the address of an object
-    NSString *log = [NSString stringWithFormat:@"%s line %d %@",methodDescription,lineNumber,contents];
+    NSString *log = [NSString stringWithFormat:@"%@ line %d %@",methodDescription,lineNumber,contents];
 
     CLSLog(@"%@",log); // CLSLogs is a silence logs and does not call NSLog
     TFLog(@"%@",log);
