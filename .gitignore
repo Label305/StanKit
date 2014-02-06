@@ -17,5 +17,9 @@ DerivedData
 *.hmap
 *.xccheckout
 
-#CocoaPods
+# CocoaPods
 Pods
+
+# Bundler binstubs
+.bundle
+bin
