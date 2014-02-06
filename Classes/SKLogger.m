@@ -15,7 +15,7 @@
 {
 
 #ifdef DEBUG
-    NSLog(@"Do not forget to add the Crashlytics script to your build steps. \"./Pods/Crashlytics/Crashlytics.framework/run\" ");
+    NSLog(@"Do not forget to add the Crashlytics script to your build steps. \"./Pods/CrashlyticsFramework/Crashlytics.framework/run %@\" ", crashlyticsAPIKey);
 #endif
 
     [TestFlight setOptions:@{ TFOptionLogToConsole : @NO }];

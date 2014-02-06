@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <Crashlytics/Crashlytics.h>
+#import <CrashlyticsFramework/Crashlytics.h>
 #import <TestFlightSDK/TestFlight.h>
 
 #define SKLog( s, ... ) [SKLogger logFor:__PRETTY_FUNCTION__ lineNumber:__LINE__ messageWithFormat:(s), ##__VA_ARGS__]
