@@ -1,0 +1,30 @@
+language: objective-c
+
+env:
+  global:
+  - secure: "kFO0znw+KgbvePsiR0Hoc6COHb/U29QWPrA1g9G62LoEy0T3SKtHFkMIRX11Nt/L4caNlCCd0KRAAxN7cZiQfBgFdifE8lfQOi7Oh3iU4dXoIjsw+B3ku9Pn417p8esbZHGNJEVtlVkt5yvPEAmjj1KXh8lsLw0AWVA+dtq9WWw="
+  - secure: "QuVkLSqY8u+qp/4VSet/EDq5zWgZGDFr3p3Z038e28iMlL7IqKr9YKfWJXw3xJvfWLoc56kyCHYklBSvRs2Px5DBlGnHSC6wSYw9Oz9s9d1DcPWn6lPIlWHHdZaC1URtdaIrD6HNAgvAA6vELST8pvie4FeJ91E1zVn/P6rsFOo="
+
+xcode_workspace: StanKit.xcworkspace
+xcode_scheme: StanKit
+xcode_sdk: iphonesimulator7.0
+
+before_install:
+- gem install --no-ri --no-rdoc cocoapods sinatra
+- screen -L -dmS cltest ruby Tests/Server/server.rb
+
+after_success:
+- brew install appledoc ncftp
+- mkdir docs
+- appledoc --project-name "StanKit ($TRAVIS_BRANCH - $TRAVIS_BUILD_NUMBER)"
+  --project-company "Label305" --company-id "com.label305" --output "docs" --publish-docset
+  --docset-platform-family "iphoneos" --logformat xcode --keep-intermediate-files
+  --no-repeat-first-par --no-warn-invalid-crossref --exit-threshold 2 --ignore Pods .
+- ncftpput -R -m -u $FTP_USER -p $FTP_PASSWORD host3.label305.com /stankit-ios/$TRAVIS_BRANCH docs/html/*
+
+notifications:
+  email: false
+  hipchat:
+    rooms:
+      secure: "amIreU0oX1ZqF/xJ5y/mEVv5thxG6chubhC0eglPRq0TScWhxY5WFmLcbaREs4V7gDb5bV+APyN/IerhYOINAZTZ1wvcITZ/HG08w0EJxrOwTIVipS9DoPZmF8kRy1FuF87pK6bT0FTS2w+QtHE4/clvHsNLKfZ0ZP4qCygSsQw="
+

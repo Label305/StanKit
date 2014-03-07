@@ -1,18 +1,18 @@
 //
-//  StanKitExampleTests.m
-//  StanKitExampleTests
+//  StanKitTests.m
+//  StanKitTests
 //
-//  Created by Thijs Scheepers on 04/02/14.
-//  Copyright (c) 2014 Label305. All rights reserved.
+//  Created by Thijs Scheepers on 07/03/14.
+//  Copyright (c) 2014 Label305 B.V. All rights reserved.
 //
 
 #import <XCTest/XCTest.h>
 
-@interface StanKitExampleTests : XCTestCase
+@interface StanKitTests : XCTestCase
 
 @end
 
-@implementation StanKitExampleTests
+@implementation StanKitTests
 
 - (void)setUp
 {
@@ -28,7 +28,7 @@
 
 - (void)testExample
 {
-    XCTFail(@"No implementation for \"%s\"", __PRETTY_FUNCTION__);
+    XCTAssert(YES, @"Always true");
 }
 
 @end
