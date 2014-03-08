@@ -1,9 +1,9 @@
 //
 //  SKAppDelegate.h
-//  StanKitExample
+//  StanKit
 //
-//  Created by Thijs Scheepers on 04/02/14.
-//  Copyright (c) 2014 Label305. All rights reserved.
+//  Created by Thijs Scheepers on 07/03/14.
+//  Copyright (c) 2014 Label305 B.V. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

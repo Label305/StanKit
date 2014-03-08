@@ -1,13 +1,12 @@
 //
 //  SKAppDelegate.m
-//  StanKitExample
+//  StanKit
 //
-//  Created by Thijs Scheepers on 04/02/14.
-//  Copyright (c) 2014 Label305. All rights reserved.
+//  Created by Thijs Scheepers on 07/03/14.
+//  Copyright (c) 2014 Label305 B.V. All rights reserved.
 //
 
 #import "SKAppDelegate.h"
-#import "SKLogger.h"
 
 @implementation SKAppDelegate
 
@@ -17,11 +16,6 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
-
-    [SKLogger setupWithTestFlightToken:@"a4ab6020-67b0-40bc-8788-94e724e0b5a5" crashlyticsAPIKey:@"eb814520be52892fc29fc171c73b474b7e07603f"];
-
-    SKLog(@"Test %@", @1);
-
     return YES;
 }
 
