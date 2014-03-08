@@ -15,8 +15,8 @@ Pod::Spec.new do |s|
   s.platform     = :ios, '7.0'
   s.source_files = 'Classes/*.{h,m}'
 
-  s.dependency 'TestFlightSDK', '~> 2.1'
-  s.dependency 'CrashlyticsFramework'
+  s.dependency 'TestFlightSDK', '~>3.0'
+  s.dependency 'CrashlyticsFramework', '~>2'
 
   s.requires_arc = true
 end
