@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface NSObject (Swizzle)
+@interface NSObject (SKSwizzle)
 
 /**
  Switches out instance selectors. Can be handy for testing to disable certain iOS features.

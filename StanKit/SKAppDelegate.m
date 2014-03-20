@@ -7,6 +7,7 @@
 //
 
 #import "SKAppDelegate.h"
+#import "SKTestViewController.h"
 
 @implementation SKAppDelegate
 
@@ -16,6 +17,8 @@
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
+    [self.window setRootViewController:[SKTestViewController new]];
     return YES;
 }
 

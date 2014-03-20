@@ -44,7 +44,7 @@
 /**
  Logs a certain message to the console and remote services.
  */
-+ (void)logFor:(char *)methodDescription lineNumber:(NSInteger)lineNumber messageWithFormat :(NSString *)formatString, ...;
++ (void)logFor:(char [28])methodDescription lineNumber:(NSInteger)lineNumber messageWithFormat :(NSString *)formatString, ...;
 
 /**
  Call to pass a checkpoint and send it to TestFlight.

@@ -8,6 +8,8 @@
 
 #import <XCTest/XCTest.h>
 
+#import "SKLogger.h"
+
 @interface StanKitTests : XCTestCase
 
 @end
@@ -28,6 +30,8 @@
 
 - (void)testExample
 {
+    [SKLogger logFor:__PRETTY_FUNCTION__ lineNumber:__LINE__ messageWithFormat:@"test %@",@"test2"];
+    
     XCTAssert(YES, @"Always true");
 }
 
