@@ -7,4 +7,5 @@
 //
 
 #import "SKLogger.h"
-#import "NSObject+Swizzle.h"
+#import "NSObject+SKSwizzle.h"
+#import "UIGestureRecognizer+SKBlocks.h"

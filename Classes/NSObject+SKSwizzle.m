@@ -6,10 +6,10 @@
 //  Copyright (c) 2014 Label305 B.V. All rights reserved.
 //
 
-#import "NSObject+Swizzle.h"
+#import "NSObject+SKSwizzle.h"
 #import <objc/runtime.h>
 
-@implementation NSObject (Swizzle)
+@implementation NSObject (SKSwizzle)
 
 + (void)swizzleInstanceSelector:(SEL)firstSelector toSelector:(SEL)secondSelector
 {

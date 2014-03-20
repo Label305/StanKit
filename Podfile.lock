@@ -4,7 +4,7 @@ PODS:
 
 DEPENDENCIES:
   - CrashlyticsFramework (~> 2)
-  - TestFlightSDK (~> 3)
+  - TestFlightSDK (~> 3.0)
 
 SPEC CHECKSUMS:
   CrashlyticsFramework: 1d1ebbb9216ac75eee9030e56cc810b254e38a58
