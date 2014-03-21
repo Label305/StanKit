@@ -13,7 +13,7 @@
 /**
  Simple C-function to log something to the console and to the remote services.
  */
-#define SKLog( s, ... ) [SKLogger logFor:__PRETTY_FUNCTION__ lineNumber:__LINE__ messageWithFormat:(s), ##__VA_ARGS__]
+#define SKLog( s, ... ) [SKLogger logFor:[NSString stringWithFormat:@"%s",__PRETTY_FUNCTION__] lineNumber:__LINE__ messageWithFormat:(s), ##__VA_ARGS__]
 
 /**
  SKLogger is a supporting class to enable logging to several remote services.
@@ -44,7 +44,7 @@
 /**
  Logs a certain message to the console and remote services.
  */
-+ (void)logFor:(char [28])methodDescription lineNumber:(NSInteger)lineNumber messageWithFormat :(NSString *)formatString, ...;
++ (void)logFor:(NSString *)methodDescription lineNumber:(NSInteger)lineNumber messageWithFormat :(NSString *)formatString, ...;
 
 /**
  Call to pass a checkpoint and send it to TestFlight.

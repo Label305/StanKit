@@ -23,7 +23,7 @@
     viewWithGestureRecognizer.backgroundColor = [UIColor redColor];
     viewWithGestureRecognizer.frame = CGRectMake(200, 200, 100, 100);
     
-    [viewWithGestureRecognizer addGestureRecognizer:[UITapGestureRecognizer instanceWithActionBlock:^(UIGestureRecognizer *sender) {
+    [viewWithGestureRecognizer addGestureRecognizer:[UITapGestureRecognizer gestureRecognizerWithBlock:^(UIGestureRecognizer *sender) {
         NSLog(@"Test");
     }]];
     

@@ -460,6 +460,7 @@
 		};
 		76A9027B18CA0E2E00E6FEEC /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E264F2CA2C464F45B850FFE9 /* Pods.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/StanKit.app/StanKit";
@@ -483,6 +484,7 @@
 		};
 		76A9027C18CA0E2E00E6FEEC /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E264F2CA2C464F45B850FFE9 /* Pods.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/StanKit.app/StanKit";

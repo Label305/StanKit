@@ -28,9 +28,9 @@
     [super tearDown];
 }
 
-- (void)testExample
+- (void)testLog
 {
-    [SKLogger logFor:__PRETTY_FUNCTION__ lineNumber:__LINE__ messageWithFormat:@"test %@",@"test2"];
+    [SKLogger logFor:[NSString stringWithFormat:@"%s",__PRETTY_FUNCTION__] lineNumber:__LINE__ messageWithFormat:@"test %@",@"test2"];
     
     XCTAssert(YES, @"Always true");
 }
