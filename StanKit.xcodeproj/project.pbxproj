@@ -22,6 +22,7 @@
 		76A9027218CA0E2E00E6FEEC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 76A9027018CA0E2E00E6FEEC /* InfoPlist.strings */; };
 		76A9027418CA0E2E00E6FEEC /* StanKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 76A9027318CA0E2E00E6FEEC /* StanKitTests.m */; };
 		76A9028118CA0E5D00E6FEEC /* SKLogger.m in Sources */ = {isa = PBXBuildFile; fileRef = 76A9027F18CA0E5D00E6FEEC /* SKLogger.m */; };
+		76C502E818E42C6100F822F9 /* UIControl+SKBlocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 76C502E718E42C6100F822F9 /* UIControl+SKBlocks.m */; };
 		76F1437218DB474C0039D60D /* UIGestureRecognizer+SKBlocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 76F1437118DB474C0039D60D /* UIGestureRecognizer+SKBlocks.m */; };
 		76F1437518DB481A0039D60D /* SKTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76F1437418DB481A0039D60D /* SKTestViewController.m */; };
 /* End PBXBuildFile section */
@@ -58,6 +59,8 @@
 		76A9027E18CA0E5D00E6FEEC /* SKLogger.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKLogger.h; sourceTree = "<group>"; };
 		76A9027F18CA0E5D00E6FEEC /* SKLogger.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKLogger.m; sourceTree = "<group>"; };
 		76A9028018CA0E5D00E6FEEC /* StanKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StanKit.h; sourceTree = "<group>"; };
+		76C502E618E42C6100F822F9 /* UIControl+SKBlocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIControl+SKBlocks.h"; sourceTree = "<group>"; };
+		76C502E718E42C6100F822F9 /* UIControl+SKBlocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIControl+SKBlocks.m"; sourceTree = "<group>"; };
 		76F1437018DB474C0039D60D /* UIGestureRecognizer+SKBlocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIGestureRecognizer+SKBlocks.h"; sourceTree = "<group>"; };
 		76F1437118DB474C0039D60D /* UIGestureRecognizer+SKBlocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIGestureRecognizer+SKBlocks.m"; sourceTree = "<group>"; };
 		76F1437318DB481A0039D60D /* SKTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKTestViewController.h; sourceTree = "<group>"; };
@@ -176,6 +179,8 @@
 				76642C4318CB2E9E002C656E /* NSObject+SKSwizzle.m */,
 				76F1437018DB474C0039D60D /* UIGestureRecognizer+SKBlocks.h */,
 				76F1437118DB474C0039D60D /* UIGestureRecognizer+SKBlocks.m */,
+				76C502E618E42C6100F822F9 /* UIControl+SKBlocks.h */,
+				76C502E718E42C6100F822F9 /* UIControl+SKBlocks.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -314,6 +319,7 @@
 				76642C4418CB2E9E002C656E /* NSObject+SKSwizzle.m in Sources */,
 				76A9025F18CA0E2E00E6FEEC /* SKAppDelegate.m in Sources */,
 				76F1437518DB481A0039D60D /* SKTestViewController.m in Sources */,
+				76C502E818E42C6100F822F9 /* UIControl+SKBlocks.m in Sources */,
 				76A9025B18CA0E2E00E6FEEC /* main.m in Sources */,
 				76A9028118CA0E5D00E6FEEC /* SKLogger.m in Sources */,
 				76F1437218DB474C0039D60D /* UIGestureRecognizer+SKBlocks.m in Sources */,

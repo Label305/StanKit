@@ -9,3 +9,4 @@
 #import "SKLogger.h"
 #import "NSObject+SKSwizzle.h"
 #import "UIGestureRecognizer+SKBlocks.h"
+#import "UIControl+SKBlocks.h"
