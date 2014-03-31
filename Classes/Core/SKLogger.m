@@ -57,7 +57,7 @@ static SKLogger *sharedLogger = nil;
     NSString *contents = [[NSString alloc] initWithFormat:formatString arguments:args];
     va_end(args);
 
-    NSString *log = [NSString stringWithFormat:@"%@:%ld %@",methodDescription,(long)lineNumber,contents];
+    NSString *log = [NSString stringWithFormat:@"%@:%ld $ %@",methodDescription,(long)lineNumber,contents];
 
     if ([self isCrashlyticsEnabled]) {
         CLSLog(@"%@",log); // CLSLogs is a silence logs and does not call NSLog
@@ -76,35 +76,31 @@ static SKLogger *sharedLogger = nil;
 {
     if (string != nil) {
         if ([self isTestFlightEnabled]) [TestFlight passCheckpoint:string];
-        if ([self isCrashlyticsEnabled]) CLS_LOG(@"Checkpoint: %@",string);
-
-        if (self.mode == SKLoggerModeDebug) {
-            NSLog(@"Checkpoint: %@",string);
-        }
+        SKLog(@"Checkpoint: %@",string);
     }
 }
 
 - (void)setUserEmail:(NSString *)email
 {
     if (email != nil) {
-        if ([self isTestFlightEnabled]) TFLog(@"E-mail: %@",email);
         if ([self isCrashlyticsEnabled]) [Crashlytics setUserEmail:email];
+        SKLog(@"E-mail: %@",email);
     }
 }
 
 - (void)setUserIdentifier:(NSString *)identifier
 {
     if (identifier != nil) {
-        if ([self isTestFlightEnabled]) TFLog(@"User identifier: %@",identifier);
         if ([self isCrashlyticsEnabled]) [Crashlytics setUserIdentifier:identifier];
+        SKLog(@"User identifier: %@",identifier);
     }
 }
 
 - (void)setUserName:(NSString *)name
 {
     if (name != nil) {
-        if ([self isTestFlightEnabled]) TFLog(@"User name: %@",name);
         if ([self isCrashlyticsEnabled]) [Crashlytics setUserName:name];
+        SKLog(@"User name: %@",name);
     }
 }
 

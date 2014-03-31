@@ -127,6 +127,8 @@ static SKAnalytics *sharedInstance = nil;
         // Initialize tracker.
         [[GAI sharedInstance] trackerWithTrackingId:trackingId];
     }
+
+    [self setSharedInstance:analytics];
 }
 
 @end

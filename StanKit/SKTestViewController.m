@@ -8,6 +8,7 @@
 
 #import "SKTestViewController.h"
 #import "StanKit.h"
+#import "Analytics.h"
 
 @interface SKTestViewController ()
 
@@ -39,6 +40,13 @@
     
     [self.view addSubview:buttonWithBlockAction];
 
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+
+    [[SKAnalytics sharedInstance] trackScreenWithName:@"Start_Screen"];
 }
 
 @end

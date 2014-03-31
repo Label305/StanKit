@@ -66,6 +66,7 @@
 		76DAA02118E998DF00ECE8DB /* UIGestureRecognizer+SKBlocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIGestureRecognizer+SKBlocks.m"; sourceTree = "<group>"; };
 		76DAA02618E99B1000ECE8DB /* SKAnalytics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKAnalytics.h; sourceTree = "<group>"; };
 		76DAA02718E99B1000ECE8DB /* SKAnalytics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKAnalytics.m; sourceTree = "<group>"; };
+		76DAA02918E9AB7D00ECE8DB /* Analytics.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Analytics.h; sourceTree = "<group>"; };
 		76F1437318DB481A0039D60D /* SKTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKTestViewController.h; sourceTree = "<group>"; };
 		76F1437418DB481A0039D60D /* SKTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKTestViewController.m; sourceTree = "<group>"; };
 		E264F2CA2C464F45B850FFE9 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
@@ -178,6 +179,7 @@
 				76DAA01818E998DF00ECE8DB /* Analytics */,
 				76DAA01918E998DF00ECE8DB /* Core */,
 				76A9028018CA0E5D00E6FEEC /* StanKit.h */,
+				76DAA02918E9AB7D00ECE8DB /* Analytics.h */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
