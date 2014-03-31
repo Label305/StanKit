@@ -100,7 +100,7 @@ static SKAnalytics *sharedInstance = nil;
                                                                value:value] build]];
     }
 
-    [[SKLogger sharedLogger] passCheckpoint:[NSString stringWithFormat:@"Event_%@_%@_%@", category, action, label]];
+    [[SKLogger sharedLogger] passCheckpoint:[NSString stringWithFormat:@"Event_%@_%@", category, action]];
 
 
 }
