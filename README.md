@@ -14,7 +14,7 @@ Features
 ---------
 * An easy logger to log to remote services like TestFlight and Crashlytics.
 * Google Analytics event and screen API
-
+* Block methods for `UIResponder` and `UIGestureRecognizer`.
 
 Usage
 ---------
