@@ -35,7 +35,7 @@
     [buttonWithBlockAction setTitle:@"Test" forState:UIControlStateNormal];
     
     [buttonWithBlockAction addActionForControlEvents:UIControlEventTouchUpInside usingBlock:^(UIControl *sender, UIEvent *event) {
-        SKLog(@"Test2");
+        [UIAlertView alertViewWithTitle:@"Test alert1" message:@"With this message"];
     }];
     
     [self.view addSubview:buttonWithBlockAction];
