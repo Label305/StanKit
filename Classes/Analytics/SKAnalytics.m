@@ -16,7 +16,8 @@
 #import "GAIFields.h"
 
 
-#define kDispatchInterval 20
+// To spare the battery high dispatch interval
+#define kDispatchInterval 180
 
 
 @interface SKAnalytics ()
@@ -125,7 +126,11 @@ static SKAnalytics *sharedInstance = nil;
         [GAI sharedInstance].dispatchInterval = kDispatchInterval;
         
         // Initialize tracker.
-        [[GAI sharedInstance] trackerWithTrackingId:trackingId];
+        id<GAITracker> tracker = [[GAI sharedInstance] trackerWithTrackingId:trackingId];
+
+        // Set the app version
+        NSString *majorVersion = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
+        [tracker set:kGAIAppVersion value:[NSString stringWithFormat:@"iOS %@",majorVersion]];
     }
 
     [self setSharedInstance:analytics];

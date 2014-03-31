@@ -137,6 +137,14 @@ static SKLogger *sharedLogger = nil;
     }
 
     [self setSharedLogger:logger];
+
+    if (mode == SKLoggerModeDebug) {
+        SKLog(@"SKLogger initiated with mode SKLoggerModeDebug");
+    } else if (mode == SKLoggerModeTesting) {
+        SKLog(@"SKLogger initiated with mode SKLoggerModeTesting");
+    } else if (mode == SKLoggerModeRelease) {
+        SKLog(@"SKLogger initiated with mode SKLoggerModeRelease");
+    }
 }
 
 + (void)passCheckpoint:(NSString *)string
