@@ -28,17 +28,16 @@ limitations under the License.
   s.requires_arc = true
 
   subspec "Core" do |sp|
-    ss.source_files = 'Classes/Core/*.{h,m}', 'Classes/StanKit.h'
+    sp.source_files = 'Classes/Core/*.{h,m}', 'Classes/StanKit.h'
 
-
-    ss.dependency 'TestFlightSDK', '~>3.0'
-    ss.dependency 'CrashlyticsFramework', '~>2'
+    sp.dependency 'TestFlightSDK', '~>3.0'
+    sp.dependency 'CrashlyticsFramework', '~>2'
   end
 
-  subspec "Analytics" do |ss|
-    ss.source_files = 'Classes/Analytics/*.{h,m}', 'Classes/Analytics.h'
+  subspec "Analytics" do |sp|
+    sp.source_files = 'Classes/Analytics/*.{h,m}', 'Classes/Analytics.h'
 
-    ss.dependency 'GoogleAnalytics-iOS-SDK', '~> 3.0.6'
+    sp.dependency 'GoogleAnalytics-iOS-SDK', '~> 3.0.6'
   end
 
   s.default_subspec = 'StanKit/Core'
