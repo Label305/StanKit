@@ -13,7 +13,44 @@ Add the following line to your Podfile: `pod 'StanKit', :git => "https://github.
 Features
 ---------
 * An easy logger to log to remote services like TestFlight and Crashlytics.
+* Google Analytics event and screen API
 
+
+Usage
+---------
+
+```objective-c
+#import <StanKit/StanKit.h>
+#import <StanKit/Analytics.h>
+```
+
+```objective-c
+- (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
+{
+    SKLoggerMode loggerMode = SKLoggerModeRelease;
+#ifdef DEBUG
+    loggerMode = SKLoggerModeDebug;
+#endif
+#ifdef TESTING
+    loggerMode = SKLoggerModeTesting;
+#endif
+
+    [SKLogger setupWithMode:loggerMode testFlightToken:@"abc-defg-hijk" crashlyticsAPIKey:@"abcdefghijk"];
+    [SKAnalytics setupGoogleAnalyticsWithTrackingId:@"UA-xxx-1"];
+    
+    ...
+}
+```
+
+```objective-c
+// Log to the console, Crashlytics and TestFlight according to the SKLoggerMode
+SKLog(@"Send a log message crashlytics and testflight");
+```
+```objective-c
+// Send screen / event to Google Analytics. Also sends a Checkpoint to Crashlytics and TestFlight.
+[[SKAnalytics sharedInstance] trackEventWithCategory:@"Account" action:@"Login" label:nil value:nil];
+[[SKAnalytics sharedInstance] trackScreenWithName:@"Start_Screen"];
+```
 
 License
 ---------
