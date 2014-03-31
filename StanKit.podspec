@@ -40,6 +40,6 @@ limitations under the License.
     sp.dependency 'GoogleAnalytics-iOS-SDK', '~> 3.0.6'
   end
 
-  s.default_subspec = 'StanKit/Core'
+  s.default_subspec = 'Core'
   
 end
