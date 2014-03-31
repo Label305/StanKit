@@ -4,7 +4,7 @@ Pod::Spec.new do |s|
   s.summary      = "iOS library with various extensions on the default iOS SDK, used at Label305 for app development."
 
   s.license      = {
-    :type => 'BSD',
+    :type => 'Apache 2.0',
     :text => <<-LICENSE
 Copyright 2014 Label305 B.V.
 
