@@ -24,7 +24,7 @@
     viewWithGestureRecognizer.frame = CGRectMake(200, 200, 100, 100);
     
     [viewWithGestureRecognizer addGestureRecognizer:[UITapGestureRecognizer gestureRecognizerWithBlock:^(UIGestureRecognizer *sender) {
-        NSLog(@"Test1");
+        SKLog(@"Test1");
     }]];
     
     [self.view addSubview:viewWithGestureRecognizer];
@@ -34,7 +34,7 @@
     [buttonWithBlockAction setTitle:@"Test" forState:UIControlStateNormal];
     
     [buttonWithBlockAction addActionForControlEvents:UIControlEventTouchUpInside usingBlock:^(UIControl *sender, UIEvent *event) {
-        NSLog(@"Test2");
+        SKLog(@"Test2");
     }];
     
     [self.view addSubview:buttonWithBlockAction];
