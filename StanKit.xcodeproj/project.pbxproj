@@ -25,6 +25,9 @@
 		76DAA02418E998DF00ECE8DB /* UIControl+SKBlocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 76DAA01F18E998DF00ECE8DB /* UIControl+SKBlocks.m */; };
 		76DAA02518E998DF00ECE8DB /* UIGestureRecognizer+SKBlocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 76DAA02118E998DF00ECE8DB /* UIGestureRecognizer+SKBlocks.m */; };
 		76DAA02818E99B1000ECE8DB /* SKAnalytics.m in Sources */ = {isa = PBXBuildFile; fileRef = 76DAA02718E99B1000ECE8DB /* SKAnalytics.m */; };
+		76DAA03318E9BEB300ECE8DB /* NSURL+SKRunscope.m in Sources */ = {isa = PBXBuildFile; fileRef = 76DAA03218E9BEB300ECE8DB /* NSURL+SKRunscope.m */; };
+		76DAA03518E9C00300ECE8DB /* SKRunscopeTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 76DAA03418E9C00300ECE8DB /* SKRunscopeTest.m */; };
+		76DAA03818E9C15F00ECE8DB /* UIAlertView+SKBlocks.m in Sources */ = {isa = PBXBuildFile; fileRef = 76DAA03718E9C15F00ECE8DB /* UIAlertView+SKBlocks.m */; };
 		76F1437518DB481A0039D60D /* SKTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 76F1437418DB481A0039D60D /* SKTestViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +70,11 @@
 		76DAA02618E99B1000ECE8DB /* SKAnalytics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKAnalytics.h; sourceTree = "<group>"; };
 		76DAA02718E99B1000ECE8DB /* SKAnalytics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKAnalytics.m; sourceTree = "<group>"; };
 		76DAA02918E9AB7D00ECE8DB /* Analytics.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Analytics.h; sourceTree = "<group>"; };
+		76DAA03118E9BEB300ECE8DB /* NSURL+SKRunscope.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURL+SKRunscope.h"; sourceTree = "<group>"; };
+		76DAA03218E9BEB300ECE8DB /* NSURL+SKRunscope.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURL+SKRunscope.m"; sourceTree = "<group>"; };
+		76DAA03418E9C00300ECE8DB /* SKRunscopeTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKRunscopeTest.m; sourceTree = "<group>"; };
+		76DAA03618E9C15F00ECE8DB /* UIAlertView+SKBlocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIAlertView+SKBlocks.h"; sourceTree = "<group>"; };
+		76DAA03718E9C15F00ECE8DB /* UIAlertView+SKBlocks.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIAlertView+SKBlocks.m"; sourceTree = "<group>"; };
 		76F1437318DB481A0039D60D /* SKTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SKTestViewController.h; sourceTree = "<group>"; };
 		76F1437418DB481A0039D60D /* SKTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SKTestViewController.m; sourceTree = "<group>"; };
 		E264F2CA2C464F45B850FFE9 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
@@ -160,6 +168,7 @@
 			children = (
 				76A9027318CA0E2E00E6FEEC /* StanKitTests.m */,
 				76A9026E18CA0E2E00E6FEEC /* Supporting Files */,
+				76DAA03418E9C00300ECE8DB /* SKRunscopeTest.m */,
 			);
 			path = StanKitTests;
 			sourceTree = "<group>";
@@ -204,6 +213,10 @@
 				76DAA01F18E998DF00ECE8DB /* UIControl+SKBlocks.m */,
 				76DAA02018E998DF00ECE8DB /* UIGestureRecognizer+SKBlocks.h */,
 				76DAA02118E998DF00ECE8DB /* UIGestureRecognizer+SKBlocks.m */,
+				76DAA03118E9BEB300ECE8DB /* NSURL+SKRunscope.h */,
+				76DAA03218E9BEB300ECE8DB /* NSURL+SKRunscope.m */,
+				76DAA03618E9C15F00ECE8DB /* UIAlertView+SKBlocks.h */,
+				76DAA03718E9C15F00ECE8DB /* UIAlertView+SKBlocks.m */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -346,7 +359,9 @@
 				76A9025F18CA0E2E00E6FEEC /* SKAppDelegate.m in Sources */,
 				76F1437518DB481A0039D60D /* SKTestViewController.m in Sources */,
 				76DAA02818E99B1000ECE8DB /* SKAnalytics.m in Sources */,
+				76DAA03318E9BEB300ECE8DB /* NSURL+SKRunscope.m in Sources */,
 				76A9025B18CA0E2E00E6FEEC /* main.m in Sources */,
+				76DAA03818E9C15F00ECE8DB /* UIAlertView+SKBlocks.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,6 +369,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76DAA03518E9C00300ECE8DB /* SKRunscopeTest.m in Sources */,
 				76A9027418CA0E2E00E6FEEC /* StanKitTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

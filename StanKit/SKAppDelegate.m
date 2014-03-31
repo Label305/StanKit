@@ -19,9 +19,9 @@
 {
     
 #ifdef DEBUG
-    [SKLogger setupWithMode:SKLoggerModeTesting testFlightToken:nil crashlyticsAPIKey:nil];
-#else
     [SKLogger setupWithMode:SKLoggerModeDebug testFlightToken:nil crashlyticsAPIKey:nil];
+#else
+    [SKLogger setupWithMode:SKLoggerModeTesting testFlightToken:nil crashlyticsAPIKey:nil];
 #endif
 
     [SKAnalytics setupGoogleAnalyticsWithTrackingId:nil];
