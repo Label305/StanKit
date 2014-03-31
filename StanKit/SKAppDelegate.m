@@ -8,11 +8,28 @@
 
 #import "SKAppDelegate.h"
 #import "SKTestViewController.h"
+#import "StanKit.h"
+#import "Analytics.h"
+
+
+#define kTestFlightToken @"41c0d390-8af5-47f9-a600-4beb1d94274c"
+#define kCrashlyticsAPIKey @"eb814520be52892fc29fc171c73b474b7e07603f"
+#define kGoogleAnalyticsTrackingId @"UA-34268655-4"
+
 
 @implementation SKAppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    
+#ifdef DEBUG
+    [SKLogger setupWithMode:SKLoggerModeTesting testFlightToken:kTestFlightToken crashlyticsAPIKey:kCrashlyticsAPIKey];
+#else
+    [SKLogger setupWithMode:SKLoggerModeDebug testFlightToken:kTestFlightToken crashlyticsAPIKey:kCrashlyticsAPIKey];
+#endif
+
+    [SKAnalytics setupGoogleAnalyticsWithTrackingId:kGoogleAnalyticsTrackingId];
+
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
