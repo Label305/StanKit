@@ -1,7 +1,5 @@
-StanKit
+StanKit [![Build Status](https://travis-ci.org/Label305/StanKit.svg?branch=master)](https://travis-ci.org/Label305/StanKit)
 =======
-
-[![Build Status](https://travis-ci.org/Label305/StanKit.png?branch=master)](https://travis-ci.org/Label305/StanKit)
 
 iOS library with various extensions on the default iOS SDK, used at Label305 for app development.
 
