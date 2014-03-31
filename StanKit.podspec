@@ -27,14 +27,14 @@ limitations under the License.
   s.platform     = :ios, '7.0'
   s.requires_arc = true
 
-  subspec "Core" do |sp|
+  s.subspec "Core" do |sp|
     sp.source_files = 'Classes/Core/*.{h,m}', 'Classes/StanKit.h'
 
     sp.dependency 'TestFlightSDK', '~>3.0'
     sp.dependency 'CrashlyticsFramework', '~>2'
   end
 
-  subspec "Analytics" do |sp|
+  s.subspec "Analytics" do |sp|
     sp.source_files = 'Classes/Analytics/*.{h,m}', 'Classes/Analytics.h'
 
     sp.dependency 'GoogleAnalytics-iOS-SDK', '~> 3.0.6'
