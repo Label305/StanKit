@@ -84,7 +84,7 @@ static SKLogger *sharedLogger = nil;
 {
     if (email != nil) {
         if ([self isCrashlyticsEnabled]) [Crashlytics setUserEmail:email];
-        SKLog(@"E-mail: %@",email);
+        SKLog(@"User email: %@",email);
     }
 }
 
