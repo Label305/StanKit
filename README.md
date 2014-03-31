@@ -12,7 +12,9 @@ Features
 ---------
 * An easy logger to log to remote services like TestFlight and Crashlytics.
 * Google Analytics event and screen API
-* Block methods for `UIResponder` and `UIGestureRecognizer`.
+* Block methods for `UIResponder`, `UIAlertView` and `UIGestureRecognizer`.
+* [Runscope](http://runscope.com) category for `NSURL`.
+* `NSObject` selector swizzle methods.
 
 Usage
 ---------
