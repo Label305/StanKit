@@ -25,7 +25,7 @@ limitations under the License.
   s.author       = { "Thijs Scheepers" => "thijs@label305.com" }
 
   s.platform     = :ios, '7.0'
-  
+  s.requires_arc = true
 
   subspec "Core" do |sp|
     ss.source_files = 'Classes/Core/*.{h,m}', 'Classes/StanKit.h'
@@ -41,6 +41,6 @@ limitations under the License.
     ss.dependency 'GoogleAnalytics-iOS-SDK', '~> 3.0.6'
   end
 
-
-  s.requires_arc = true
+  s.default_subspec = 'StanKit/Core'
+  
 end
