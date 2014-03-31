@@ -20,6 +20,8 @@
 {
     [super setUp];
     // Put setup code here. This method is called before the invocation of each test method in the class.
+
+    [SKLogger setupWithMode:SKLoggerModeDebug testFlightToken:nil crashlyticsAPIKey:nil];
 }
 
 - (void)tearDown
@@ -30,7 +32,7 @@
 
 - (void)testLog
 {
-    [SKLogger logFor:[NSString stringWithFormat:@"%s",__PRETTY_FUNCTION__] lineNumber:__LINE__ messageWithFormat:@"test %@",@"test2"];
+    [[SKLogger sharedLogger] logFor:[NSString stringWithFormat:@"%s",__PRETTY_FUNCTION__] lineNumber:__LINE__ messageWithFormat:@"test %@",@"test2"];
     
     XCTAssert(YES, @"Always true");
 }
