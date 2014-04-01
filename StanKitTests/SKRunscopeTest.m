@@ -24,4 +24,22 @@
     XCTAssert([[runscope absoluteString] isEqualToString:@"http://www-beleeftwente-nl-abcdefgh.eu1.runscope.net/api/rest"], @"%@ not correct", [runscope absoluteString]);
 }
 
+- (void)testRunscopeDoubleDash
+{
+    NSURL *original = [NSURL URLWithString:@"http://www.beleef-twente.nl/api/rest"];
+
+    NSURL *runscope = [original runscopeURLWithBucket:@"abcdefgh"];
+
+    XCTAssert([[runscope absoluteString] isEqualToString:@"http://www-beleef--twente-nl-abcdefgh.eu1.runscope.net/api/rest"], @"%@ not correct", [runscope absoluteString]);
+}
+
+- (void)testRunscopeTailingSlash
+{
+    NSURL *original = [NSURL URLWithString:@"http://www.beleeftwente.nl/api/rest/"];
+
+    NSURL *runscope = [original runscopeURLWithBucket:@"abcdefgh"];
+
+    XCTAssert([[runscope absoluteString] isEqualToString:@"http://www-beleeftwente-nl-abcdefgh.eu1.runscope.net/api/rest/"], @"%@ not correct", [runscope absoluteString]);
+}
+
 @end

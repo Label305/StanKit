@@ -12,6 +12,8 @@
 
 - (NSURL *)runscopeURLWithBucket:(NSString *)bucket
 {
+    BOOL tailingSlash = [[self absoluteString] hasSuffix:@"/"];
+
     NSString *newHost;
     newHost = [[self host]  stringByReplacingOccurrencesOfString:@"-" withString:@"--"]; //hyphens need to be doubled
     // We always need the EU server
@@ -32,6 +34,8 @@
     }
 
     NSString *newURLString = [NSString stringWithFormat:@"%@://%@%@", [self scheme], newHost, newPath];
+
+    if (tailingSlash) newURLString = [newURLString stringByAppendingString:@"/"];
 
     return [NSURL URLWithString:newURLString];
 }
