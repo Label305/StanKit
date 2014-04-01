@@ -12,3 +12,4 @@
 #import "UIControl+SKBlocks.h"
 #import "UIAlertView+SKBlocks.h"
 #import "NSURL+SKRunscope.h"
+#import "NSString+SKURLEncode.h"
