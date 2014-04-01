@@ -6,7 +6,12 @@ iOS library with various extensions on the default iOS SDK, used at Label305 for
 CocoaPods
 ---------
 
-Add the following line to your Podfile: `pod 'StanKit', :git => "https://github.com/Label305/StanKit.git"`.
+Add the following lines to your Podfile:
+
+```ruby
+pod 'StanKit', :git => "https://github.com/Label305/StanKit.git"
+pod 'StanKit/Analytics', :git => "https://github.com/Label305/StanKit.git"
+```
 
 Features
 ---------
