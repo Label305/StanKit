@@ -9,8 +9,8 @@ CocoaPods
 Add the following lines to your Podfile:
 
 ```ruby
-pod 'StanKit', :git => "https://github.com/Label305/StanKit.git"
-pod 'StanKit/Analytics', :git => "https://github.com/Label305/StanKit.git"
+pod 'StanKit', '~> 0.1'
+pod 'StanKit/Analytics'
 ```
 
 Features
