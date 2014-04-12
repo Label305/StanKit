@@ -12,7 +12,8 @@
 
 
 /**
- Enumeration type for the RSVP status.
+ Enumeration type for the logging mode.
+ Dubug will not log to Crashlytics, Produciton will not log to Testflight.
  */
 typedef NS_ENUM(NSInteger, SKLoggerMode) {
     SKLoggerModeDebug,
