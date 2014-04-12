@@ -10,7 +10,7 @@ Add the following lines to your Podfile:
 
 ```ruby
 pod 'StanKit', '~> 0.1'
-pod 'StanKit/Analytics'
+pod 'StanKit/Analytics', '~> 0.1'
 ```
 
 Features
