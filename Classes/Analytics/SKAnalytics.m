@@ -16,8 +16,8 @@
 #import "GAIFields.h"
 
 
-// To spare the battery high dispatch interval
-#define kDispatchInterval 180
+// Dispatch interval for sending data to Google
+#define kDispatchInterval 20
 
 
 @interface SKAnalytics ()
