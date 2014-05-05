@@ -73,7 +73,6 @@ static SKAnalytics *sharedInstance = nil;
                value:screenName];
 
         [tracker send:[[GAIDictionaryBuilder createAppView] build]];
-
     }
 
     [[SKLogger sharedLogger] passCheckpoint:[NSString stringWithFormat:@"Screen_%@", screenName]];
@@ -101,8 +100,6 @@ static SKAnalytics *sharedInstance = nil;
     }
 
     [[SKLogger sharedLogger] passCheckpoint:[NSString stringWithFormat:@"Event_%@_%@", category, action]];
-
-
 }
 
 
@@ -131,6 +128,8 @@ static SKAnalytics *sharedInstance = nil;
         // Set the app version
         NSString *majorVersion = [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"];
         [tracker set:kGAIAppVersion value:[NSString stringWithFormat:@"iOS %@",majorVersion]];
+    } else {
+        SKLog(@"Google Analytics not enabled due to debug mode.");
     }
 
     [self setSharedInstance:analytics];
