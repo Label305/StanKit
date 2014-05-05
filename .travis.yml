@@ -7,11 +7,15 @@ env:
 
 xcode_workspace: StanKit.xcworkspace
 xcode_scheme: StanKit
-xcode_sdk: iphonesimulator7.0
+xcode_sdk: iphonesimulator7.1
 
 before_install:
-- gem install --no-ri --no-rdoc cocoapods sinatra
-- screen -L -dmS cltest ruby Tests/Server/server.rb
+- gem install --no-ri --no-rdoc cocoapods
+- git clone https://github.com/facebook/xctool.git ../xctool
+
+# Here because the latest release of xctool does not work correctly with xcode 5.1 projects
+# This line builds and executes xctool
+script: sh ../xctool/xctool.sh -workspace "StanKit.xcworkspace" -scheme "StanKit -sdk iphonesimulator7.1 build test
 
 after_success:
 - brew install appledoc ncftp
