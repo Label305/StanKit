@@ -111,6 +111,7 @@ static SKLogger *sharedLogger = nil;
 + (void)setupWithMode:(SKLoggerMode)mode testFlightToken:(NSString *)testFlightToken crashlyticsAPIKey:(NSString *)crashlyticsAPIKey
 {
     SKLogger *logger = [SKLogger new];
+    logger.mode = mode;
 
     if (mode == SKLoggerModeTesting && testFlightToken != nil) {
 
