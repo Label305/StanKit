@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "StanKit"
-  s.version      = "0.1"
+  s.version      = "0.1.1"
   s.summary      = "iOS library with various extensions on the default iOS SDK, particularly logging to several services."
 
   s.description  = <<-DESC
