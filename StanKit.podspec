@@ -18,7 +18,7 @@ Pod::Spec.new do |s|
   s.license      = { :type => 'Apache License, Version 2.0', :file => 'LICENSE' }
   s.author       = { "Thijs Scheepers" => "thijs@label305.com" }
 
-  s.source       = { :git => "https://github.com/Label305/StanKit.git", :tag => "0.1" }
+  s.source       = { :git => "https://github.com/Label305/StanKit.git", :tag => "0.2" }
 
 
   s.platform     = :ios, '7.0'
