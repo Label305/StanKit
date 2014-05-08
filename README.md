@@ -9,13 +9,13 @@ CocoaPods
 Add the following lines to your Podfile:
 
 ```ruby
-pod 'StanKit', '~> 0.1'
-pod 'StanKit/Analytics', '~> 0.1'
+pod 'StanKit', '~> 0.2'
+pod 'StanKit/Analytics', '~> 0.2'
 ```
 
 Features
 ---------
-* An easy logger to log to remote services like TestFlight and Crashlytics.
+* An easy logger to log to remote services like Crashlytics.
 * Google Analytics event and screen API
 * Block methods for `UIResponder`, `UIAlertView` and `UIGestureRecognizer`.
 * [Runscope](http://runscope.com) category for `NSURL`.
@@ -40,7 +40,7 @@ Usage
     loggerMode = SKLoggerModeTesting;
 #endif
 
-    [SKLogger setupWithMode:loggerMode testFlightToken:@"abc-defg-hijk" crashlyticsAPIKey:@"abcdefghijk"];
+    [SKLogger setupWithMode:loggerMode crashlyticsAPIKey:@"abcdefghijk"];
     [SKAnalytics setupGoogleAnalyticsWithTrackingId:@"UA-xxx-1"];
     
     ...
@@ -48,11 +48,11 @@ Usage
 ```
 
 ```objective-c
-// Log to the console, Crashlytics and TestFlight according to the SKLoggerMode
-SKLog(@"Send a log message crashlytics and testflight");
+// Log to the console, Crashlytics according to the SKLoggerMode
+SKLog(@"Send a log message crashlytics");
 ```
 ```objective-c
-// Send screen / event to Google Analytics. Also sends a Checkpoint to Crashlytics and TestFlight.
+// Send screen / event to Google Analytics. Also sends a Checkpoint to Crashlytics.
 [[SKAnalytics sharedInstance] trackEventWithCategory:@"Account" action:@"Login" label:nil value:nil];
 [[SKAnalytics sharedInstance] trackScreenWithName:@"Start_Screen"];
 ```

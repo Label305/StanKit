@@ -20,11 +20,6 @@
  */
 @property (readwrite, nonatomic, getter = isCrashlyticsEnabled) BOOL crashlyticsEnabled;
 
-/**
- Check this property to see if TestFlight is enabled for this instance of SKLogger
- */
-@property (readwrite, nonatomic, getter = isTestFlightEnabled) BOOL testFlightEnabled;
-
 @end
 
 
@@ -63,10 +58,6 @@ static SKLogger *sharedLogger = nil;
         CLSLog(@"%@",log); // CLSLogs is a silence logs and does not call NSLog
     }
 
-    if ([self isTestFlightEnabled]) {
-        TFLog(@"%@",log);
-    }
-
     if (self.mode == SKLoggerModeDebug) {
         NSLog(@"%@",log);
     }
@@ -75,7 +66,6 @@ static SKLogger *sharedLogger = nil;
 - (void)passCheckpoint:(NSString *)string
 {
     if (string != nil) {
-        if ([self isTestFlightEnabled]) [TestFlight passCheckpoint:string];
         SKLog(@"Checkpoint: %@",string);
     }
 }
@@ -110,19 +100,13 @@ static SKLogger *sharedLogger = nil;
 
 + (void)setupWithMode:(SKLoggerMode)mode testFlightToken:(NSString *)testFlightToken crashlyticsAPIKey:(NSString *)crashlyticsAPIKey
 {
+    [self setupWithMode:mode crashlyticsAPIKey:crashlyticsAPIKey];
+}
+
++ (void)setupWithMode:(SKLoggerMode)mode crashlyticsAPIKey:(NSString *)crashlyticsAPIKey
+{
     SKLogger *logger = [SKLogger new];
     logger.mode = mode;
-
-    if (mode == SKLoggerModeTesting && testFlightToken != nil) {
-
-        logger.testFlightEnabled = YES;
-
-        [TestFlight setOptions:@{ TFOptionLogToConsole : @NO }];
-        [TestFlight setOptions:@{ TFOptionLogToSTDERR : @NO }];
-
-        // Enable the app to use TestFlight and send reports to TestFlight
-        [TestFlight takeOff:testFlightToken];
-    }
 
     if (crashlyticsAPIKey != nil) {
 

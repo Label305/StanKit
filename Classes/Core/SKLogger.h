@@ -8,12 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import <CrashlyticsFramework/Crashlytics.h>
-#import <TestFlightSDK/TestFlight.h>
 
 
 /**
  Enumeration type for the logging mode.
- Dubug will not log to Crashlytics, Produciton will not log to Testflight.
+ Dubug will not log to Crashlytics
  */
 typedef NS_ENUM(NSInteger, SKLoggerMode) {
     SKLoggerModeDebug,
@@ -29,7 +28,7 @@ typedef NS_ENUM(NSInteger, SKLoggerMode) {
 /**
  SKLogger is a supporting class to enable logging to several remote services.
  
- To start using this class you should call +setupWithMode:testFlightToken:crashlyticsAPIKey: in your application:didFinishLaunchingWithOptions:
+ To start using this class you should call +setupWithMode:crashlyticsAPIKey: in your application:didFinishLaunchingWithOptions:
  */
 @interface SKLogger : NSObject
 
@@ -40,7 +39,7 @@ typedef NS_ENUM(NSInteger, SKLoggerMode) {
 /**
  Get the shared logger object.
  
- @see setupWithMode:testFlightToken:crashlyticsAPIKey:
+ @see setupWithMode:crashlyticsAPIKey:
  */
 + (instancetype)sharedLogger;
 
@@ -56,11 +55,6 @@ typedef NS_ENUM(NSInteger, SKLoggerMode) {
  Check this property to see if Crahlytics is enabled for this instance of SKLogger
  */
 @property (readonly, nonatomic, getter = isCrashlyticsEnabled) BOOL crashlyticsEnabled;
-
-/**
- Check this property to see if TestFlight is enabled for this instance of SKLogger
- */
-@property (readonly, nonatomic, getter = isTestFlightEnabled) BOOL testFlightEnabled;
 
 /**
  Logs a certain message to the console and remote services.
@@ -92,16 +86,20 @@ typedef NS_ENUM(NSInteger, SKLoggerMode) {
 #pragma mark - Convinience methods
 
 /**
- Call this method to initiate the sharedLogger. You should call this method in your application:didFinishLaunchingWithOptions:
- 
- @param mode To set the mode, the specific mode controls the way things are logged and are used.
- @param testFlightToken The testFlightToken, pass nil if you don't wish to initialize testFlight
- @param crashlyticsAPIKey The crashlyticsAPIKey, pass nil if you don't wish to initialize crashlytics
+ @deprecated This method is deprecated setupWithMode:crashlyticsAPIKey:
  */
 + (void)setupWithMode:(SKLoggerMode)mode testFlightToken:(NSString *)testFlightToken crashlyticsAPIKey:(NSString *)crashlyticsAPIKey;
 
 /**
- Call to pass a checkpoint and send it to TestFlight.
+ Call this method to initiate the sharedLogger. You should call this method in your application:didFinishLaunchingWithOptions:
+ 
+ @param mode To set the mode, the specific mode controls the way things are logged and are used.
+ @param crashlyticsAPIKey The crashlyticsAPIKey, pass nil if you don't wish to initialize crashlytics
+ */
++ (void)setupWithMode:(SKLoggerMode)mode crashlyticsAPIKey:(NSString *)crashlyticsAPIKey;
+
+/**
+ Call to pass a checkpoint.
  
  @deprecated This method is deprecated use the instance method instead.
  */

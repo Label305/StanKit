@@ -1,13 +1,13 @@
 Pod::Spec.new do |s|
 
   s.name         = "StanKit"
-  s.version      = "0.1.1"
+  s.version      = "0.2"
   s.summary      = "iOS library with various extensions on the default iOS SDK, particularly logging to several services."
 
   s.description  = <<-DESC
                    iOS library with various extensions on the default iOS SDK.
 
-                   * An easy logger to log to remote services like TestFlight and Crashlytics.
+                   * An easy logger to log to remote services like Crashlytics.
                    * Google Analytics event and screen API.
                    * Block methods for `UIResponder`, `UIAlertView` and `UIGestureRecognizer`.
                    * [Runscope](http://runscope.com) category for `NSURL`.
@@ -27,7 +27,6 @@ Pod::Spec.new do |s|
   s.subspec 'Core' do |sp|
     sp.source_files = 'Classes/Core/*.{h,m}', 'Classes/StanKit.h'
 
-    sp.dependency 'TestFlightSDK', '~>3.0'
     sp.dependency 'CrashlyticsFramework', '~>2'
   end
 
